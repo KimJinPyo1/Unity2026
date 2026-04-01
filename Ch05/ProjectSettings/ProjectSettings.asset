@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 5f3b51538aa2ee243bfedf33795e1fe8
+  productGUID: 8ee64f72acb75894ebcfe795abbc56be
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: scnu
-  productName: Ch04
+  companyName: DefaultCompany
+  productName: Ch05
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -165,7 +165,6 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: scnu.Ch04
     Standalone: com.DefaultCompany.2D-URP
   buildNumber:
     Standalone: 0
@@ -407,10 +406,7 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings: []
   m_BuildTargetGroupLoadStoreDebugModeSettings: []
   m_BuildTargetNormalMapEncoding: []
-  m_BuildTargetDefaultTextureCompressionFormat:
-  - serializedVersion: 3
-    m_BuildTarget: Android
-    m_Formats: 01000000
+  m_BuildTargetDefaultTextureCompressionFormat: []
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -697,14 +693,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Ch04
+  metroPackageName: Ch05
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Ch04
+  metroApplicationDescription: Ch05
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -775,10 +771,10 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: d076c74a-8bf1-420c-b00b-23d5299c0779
+  cloudProjectId: 5371300a-f14f-416b-ad69-d699dc01a2fa
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Ch04
+  projectName: Ch05
   organizationId: a85371185
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
