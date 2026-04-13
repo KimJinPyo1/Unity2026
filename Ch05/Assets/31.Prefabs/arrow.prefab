@@ -100,4 +100,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a443ab19f6505840bbe590edb8532be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropSpeed: 1
+  player: {fileID: 0}
+  dropSpeed: 0.1
