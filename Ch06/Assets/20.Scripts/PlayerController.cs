@@ -2,11 +2,13 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float jumpForce = 600f;
-    public float walkForce = 30f;
-    public float maxWalkSpeed = 2f;
+    float jumpForce = 300f;
+    float walkForce = 5f;
+    float maxWalkSpeed = 1f;
+    Animator anim;
 
     public Sprite[] walkSprites;
+    public Sprite jumpSprite;
     public float animationPeriod = 0.1f;
     float time = 0;
     int idx = 0;
@@ -18,6 +20,12 @@ public class PlayerController : MonoBehaviour
         Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
+        anim = GetComponent<Animator>();
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("¼º°ø");
     }
 
     void Update()
@@ -33,15 +41,29 @@ public class PlayerController : MonoBehaviour
         }
 
         time += Time.deltaTime;
-        if(time > animationPeriod)
+
+        if (rb.linearVelocityY != 0)
         {
-            time = 0;
-            sr.sprite = walkSprites[idx];
-            idx++;
-            if(idx == walkSprites.Length)
-            {
-                idx = 0;
-            }
+            anim.SetBool("isJumping", true);
         }
+        else if (time > animationPeriod)
+        {
+            anim.SetBool("isJumping", false);
+        }
+
+        //if (rb.linearVelocityY != 0)
+        //{
+        //    sr.sprite = jumpSprite;
+        //}
+        //else if (time > animationPeriod)
+        //{
+        //    time = 0;
+        //    sr.sprite = walkSprites[idx];
+        //    idx++;
+        //    if (idx == walkSprites.Length)
+        //    {
+        //        idx = 0;
+        //    }
+        //}
     }
 }
