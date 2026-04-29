@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -19,18 +20,18 @@ public class PlayerController : MonoBehaviour
     {
         Application.targetFrameRate = 60;
         rb = GetComponent<Rigidbody2D>();
-        sr = GetComponent<SpriteRenderer>();
+        sr = GetComponent<SpriteRenderer>(); 
         anim = GetComponent<Animator>();
     }
-
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
+        SceneManager.LoadScene("ClearScene");
         Debug.Log("¼º°ø");
     }
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && rb.linearVelocityY == 0)
         {
             rb.AddForce(transform.up * jumpForce);
         }
@@ -65,5 +66,10 @@ public class PlayerController : MonoBehaviour
         //        idx = 0;
         //    }
         //}
+
+        if(transform.position.y < -8)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }
