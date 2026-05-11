@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BamsongiController : MonoBehaviour
 {
-    public Renderer renderer;
+    //public Renderer renderer;
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -21,7 +21,7 @@ public class BamsongiController : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        renderer.enabled = false;
+        //renderer.enabled = false;
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<ParticleSystem>().Play();
         Destroy(gameObject, 0.5f);
