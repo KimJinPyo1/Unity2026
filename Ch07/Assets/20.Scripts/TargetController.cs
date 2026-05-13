@@ -3,9 +3,11 @@ using UnityEngine;
 public class TargetController : MonoBehaviour
 {
     GameObject player;
+    TargetGenerator tg;
     private void Start()
     {
         player = GameObject.Find("Player");
+        tg = GameObject.FindObjectOfType<TargetGenerator>();
     }
     private void Update()
     {
@@ -15,6 +17,7 @@ public class TargetController : MonoBehaviour
     {
         if(collision.gameObject.tag.Equals("Bamsongi"))
         {
+            tg.GenerateTarget(player.transform.position);
             Destroy(gameObject);
         }
     }
